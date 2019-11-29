@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/index">Game Lobby</a>
+        </div>
+      <ul class="nav navbar-nav">
+        <li>
+            <a routerLink="/home" routerLinkActive="active" style="font-size: 30px;">Home</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+  <div class="center">
+<br>
+  <h2 style="font-family: 'Raleway',sans-serif; font-size: 35px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;">{{title}}</h2>
+  <label class='filter'>Filter Search</label>
+  <input [(ngModel)]="searchText" placeholder="search text goes here">
+<br><br><br>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <td>Player Name</td>
+        <td>Rank</td>
+        <td>Score</td>
+        <td>Time</td>
+        <td>Games Played</td>
+        <td>Status</td>
+        <td>Action</td>
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let player of players | filter: {playerName:searchText, rank:searchText,
+            score:searchText, time:searchText, gamesPlayed:searchText, status:searchText}">
+            <td>{{ player.playerName }}</td>
+            <td>{{ player.rank }}</td>
+            <td>{{ player.score }}</td>
+            <td>{{ player.time }}</td>
+            <td>{{ player.gamesPlayed }}</td>
+            <td>{{ player.status }}</td>
+            <td *ngIf="player.status=='Available'">
+              <button class="btn"><a [routerLink]="['/join', player._id]">Join Game</a> </button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+    </div>
+        <router-outlet></router-outlet>
+</body>
