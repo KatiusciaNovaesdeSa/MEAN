@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AuthService} from '../../services/auth.service';
-import { HomeComponent } from './home.component';
+import { PlayerDashboardComponent } from './player_dashboard.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('PlayerDashboardComponent', () => {
+  let component: PlayerDashboardComponent;
+  let fixture: ComponentFixture<PlayerDashboardComponent>;
 
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
+      declarations: [ PlayerDashboardComponent ],
       providers: [
         { provide: AuthService, useValue: { isAuthenticated: () => false }}
       ]
@@ -18,7 +18,7 @@ describe('HomeComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(PlayerDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 import { GamesService } from '../../../services/games.service';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-add',
+  templateUrl: './add.component.html',
+  styleUrls: ['./add.component.css']
 })
-export class CreateComponent implements OnInit {
+export class AddComponent implements OnInit {
   rank=[];
   games:any;
   statuses=[{id:1,st:'Available'},{id:2,st:'Unavailable'}]

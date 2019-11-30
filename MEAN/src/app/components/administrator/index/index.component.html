@@ -51,8 +51,8 @@
             <td>{{ player.time }}</td>
             <td>{{ player.gamesPlayed }}</td>
             <td>{{ player.status }}</td>
-            <td><button class="btn"><a [routerLink]="['/edit', player._id]" >Edit</a></button></td>
-            <td><button (click)="deletePlayer(player._id)" class="btn">Delete</button></td>
+            <td><button class="btn btn-info"><a [routerLink]="['/edit', player._id]" >Edit</a></button></td>
+            <td><button (click)="deletePlayer(player._id)" class="btn btn-primary">Delete</button></td>
         </tr>
     </tbody>
   </table>

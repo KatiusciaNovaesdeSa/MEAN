@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-player_dashboard',
+  templateUrl: './player_dashboard.component.html',
+  styleUrls: ['./player_dashboard.component.css']
 })
-export class HomeComponent implements OnInit {
+export class PlayerDashboardComponent implements OnInit {
 
   constructor(public auth: AuthService) { }
 
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
   getIDKey(){
     let myItem = localStorage.getItem("email");
-      if(myItem == "nolanhoney2013@gmail.com"){
+      if(myItem == "katiuscianovaes@gmail.com"){
         return true;
       }
     else return false;

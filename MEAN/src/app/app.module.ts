@@ -8,13 +8,13 @@ import { FilterPipe } from './filter/filter.pipe';
 
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/playerComponents/home/home.component';
+import { PlayerDashboardComponent } from './components/playerComponents/player_dashboard/player_dashboard.component';
 
-import { IndexComponent } from './components/adminComponents/index/index.component';
-import { CreateComponent } from './components/adminComponents/create/create.component';
-import { EditComponent } from './components/adminComponents/edit/edit.component';
-import { AdminComponent } from './components/adminComponents/admin/admin.component';
-import { GamesComponent } from './components/adminComponents/games/games.component';
+import { IndexComponent } from './components/administrator/index/index.component';
+import { AddComponent } from './components/administrator/add/add.component';
+import { EditComponent } from './components/administrator/edit/edit.component';
+import { AdminDashComponent } from './components/administrator/dashboard/admDash.component';
+import { GamesComponent } from './components/administrator/games/games.component';
 import { PlayersComponent } from './components/playerComponents/players/players.component';
 import { JoinComponent } from './components/playerComponents/join/join.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -25,12 +25,12 @@ import {AuthService} from "./services/auth.service";
 
 
 const routes: Routes=[
-  {path: '',  component: HomeComponent},
-  {path: 'home',  component: HomeComponent},
+  {path: '',  component: PlayerDashboardComponent},
+  {path: 'home',  component: PlayerDashboardComponent},
   {path: 'index', component: IndexComponent},
-  {path: 'create', component: CreateComponent},
+  {path: 'add', component: AddComponent},
   {path: 'edit/:id', component: EditComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin', component: AdminDashComponent},
   {path: 'players', component: PlayersComponent},
   {path: 'games', component: GamesComponent},  
   {path: 'join/:id', component: JoinComponent}
@@ -39,11 +39,11 @@ const routes: Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    PlayerDashboardComponent,
     IndexComponent,
-    CreateComponent,
+    AddComponent,
     EditComponent,
-    AdminComponent,
+    AdminDashComponent,
     GamesComponent,
     PlayersComponent,
     JoinComponent,
