@@ -17,6 +17,7 @@ import { AdminDashComponent } from './components/administrator/dashboard/admDash
 import { GamesComponent } from './components/administrator/games/games.component';
 import { PlayersComponent } from './components/playerComponents/players/players.component';
 import { JoinComponent } from './components/playerComponents/join/join.component';
+import { CallbackComponent } from './components/callback/callback.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //auth0
@@ -34,6 +35,7 @@ const routes: Routes=[
   {path: 'players', component: PlayersComponent},
   {path: 'games', component: GamesComponent},  
   {path: 'join/:id', component: JoinComponent}
+  {path: 'callback/', component: CallbackComponent}
 ];
 
 @NgModule({
@@ -47,6 +49,7 @@ const routes: Routes=[
     GamesComponent,
     PlayersComponent,
     JoinComponent,
+    CallbackComponent,
     FilterPipe
 
   ],
