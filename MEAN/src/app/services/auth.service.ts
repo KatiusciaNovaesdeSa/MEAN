@@ -10,7 +10,7 @@ export class AuthService {
     clientID: 'GwzlACmRPjtkaoOg67fcMOjSMDAKfCGq',
     domain: 'dev-1j014x2o.auth0.com',
     responseType: 'token id_token',
-    redirectUri: 'http://localhost:4200/admin',
+    redirectUri: 'https://fullstack-proj-katiuscia.herokuapp.com/admin',
     scope: 'openid'
   });
   
