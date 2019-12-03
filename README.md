@@ -2,8 +2,8 @@
 
 
 
-Login: admin@admin.com
-password:Admin123!
+Login: admin@gbc.com
+password:Admin123
  
  To Run:
  run npm install on main project folder

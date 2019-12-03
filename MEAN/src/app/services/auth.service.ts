@@ -7,7 +7,7 @@ import * as auth0 from 'auth0-js';
 @Injectable()
 export class AuthService {
     auth0 = new auth0.WebAuth({
-    clientID: '1cxB1mQh0uk6ced03jMcxec5p9xLiiQO',
+    clientID: 'GwzlACmRPjtkaoOg67fcMOjSMDAKfCGq',
     domain: 'dev-1j014x2o.auth0.com',
     responseType: 'token id_token',
     redirectUri: 'http://localhost:4200/admin',
