@@ -48,7 +48,7 @@
             <td>{{ player.gamesPlayed }}</td>
             <td>{{ player.status }}</td>
             <td *ngIf="player.status=='Available'">
-              <button class="btn"><a [routerLink]="['/join', player._id]">Join Game</a> </button>
+              <button class="btn btn-info"><a [routerLink]="['/join', player._id]">Join Game</a> </button>
             </td>
         </tr>
     </tbody>

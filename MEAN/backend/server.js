@@ -8,7 +8,7 @@ const express = require('express'),
       
       mongoose.Promise = global.Promise;
       mongoose.connect(config.DB).then(
-          () => {console.log('Database is connected') },
+          () => {console.log('Database connected') },
           err => { console.log('Can not connect to the database'+ err)}
         );
 
