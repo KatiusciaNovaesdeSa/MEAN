@@ -1,8 +1,7 @@
 #Game Lobby 
 
 Authors: Katiuscia Novaes de Sa
-         Nathalia Silva
-         Yuri Kusik
+        
          
 Login: admin@gbc.com
 password:Admin123
