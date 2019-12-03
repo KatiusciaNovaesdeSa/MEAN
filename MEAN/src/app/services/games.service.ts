@@ -9,7 +9,7 @@ export class GamesService {
   result:any;
   constructor(private http: HttpClient) { }
   getGames(){
-    const uri = 'http://localhost:4000/games';
+    const uri = 'https://fullstack-proj-katiuscia.herokuapp.com/games';
     return this
             .http
             .get(uri)
@@ -18,7 +18,7 @@ export class GamesService {
             }));
   }
   joinGame(id) {
-    const uri = 'http://localhost:4000/players/join/' + id;
+    const uri = 'https://fullstack-proj-katiuscia.herokuapp.com/players/join/' + id;
     return this
             .http
             .get(uri)
