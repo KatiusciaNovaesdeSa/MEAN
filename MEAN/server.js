@@ -3,7 +3,7 @@ const express = require('express'),
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/testApp'));
 //app.use(bodyParser.json());
 const port = process.env.PORT || 4200;
 app.listen(port, function(){
