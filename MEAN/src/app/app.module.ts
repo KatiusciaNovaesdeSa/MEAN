@@ -34,7 +34,7 @@ const routes: Routes=[
   {path: 'admin', component: AdminDashComponent},
   {path: 'players', component: PlayersComponent},
   {path: 'games', component: GamesComponent},  
-  {path: 'join/:id', component: JoinComponent}
+  {path: 'join/:id', component: JoinComponent},
   {path: 'callback/', component: CallbackComponent}
 ];
 
