@@ -15,7 +15,7 @@ const express = require('express'),
 
 const appBackend = express();
 appBackend.use(bodyParser.json());
-appBackend.use(cors());
+// appBackend.use(cors());
 const portBackend = 4000;
 appBackend.use('/players', playerRoutes);
 appBackend.use('/games', gameRoutes);
@@ -26,7 +26,7 @@ appBackend.listen(portBackend, function(){
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'dist/testApp')));
 
