@@ -3,9 +3,9 @@ const express = require('express'),
       path = require('path');
       cors = require('cors'),
       mongoose = require('mongoose'),
-      config = require('backend/config/DB');
-      playerRoutes = require('backend/routes/playerRoutes');
-      gameRoutes=require('backend/routes/gamesRoutes')
+      config = require('./backend/config/DB');
+      playerRoutes = require('./backend/routes/playerRoutes');
+      gameRoutes=require('./backend/routes/gamesRoutes')
       
       mongoose.Promise = global.Promise;
       mongoose.connect(config.DB).then(
@@ -25,8 +25,8 @@ appBackend.listen(portBackend, function(){
        
 
 const app = express();
-
 app.use(bodyParser.json());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'dist/testApp')));
 
