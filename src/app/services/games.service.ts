@@ -9,7 +9,7 @@ export class GamesService {
   result:any;
   constructor(private http: HttpClient) { }
   getGames(){
-    const uri = '/games';
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/games';
     return this
             .http
             .get(uri)
@@ -18,7 +18,7 @@ export class GamesService {
             }));
   }
   joinGame(id) {
-    const uri = '/players/join/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/join/' + id;
     return this
             .http
             .get(uri)

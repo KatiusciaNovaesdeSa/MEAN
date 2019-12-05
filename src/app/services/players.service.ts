@@ -10,7 +10,7 @@ export class PlayersService {
   result:any;
   constructor(private http: HttpClient) { }
   addPlayer(playerName, rank,score,time,gamesPlayed,status,join) {
-    const uri = '/players/add';
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/add';
     const obj = {
       playerName:playerName ,
       rank:rank ,
@@ -24,7 +24,7 @@ export class PlayersService {
         .subscribe(res => console.log('Done'));
   }
   getPlayers(){
-    const uri = '/players';
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players';
     return this
             .http
             .get(uri)
@@ -33,7 +33,7 @@ export class PlayersService {
             }));
   }
   editPlayer(id) {
-    const uri = '/players/edit/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/edit/' + id;
     return this
             .http
             .get(uri)
@@ -42,7 +42,7 @@ export class PlayersService {
             }));
   }
   updatePlayer(playerName, rank, score, time, gamesPlayed,status, id) {
-    const uri = '/players/update/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/update/' + id;
 
       const obj = {
         playerName:playerName ,
@@ -58,7 +58,7 @@ export class PlayersService {
       .subscribe(res => console.log('Done'));
   }
   playerGame(id) {
-    const uri = '/players/join/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/join/' + id;
     return this
             .http
             .get(uri)
@@ -67,7 +67,7 @@ export class PlayersService {
             }));
   }
   joinGame(playerName, rank, score, time, gamesPlayed,status, id) {
-    const uri = '/players/joingame/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/joingame/' + id;
 
       const obj = {
         playerName:playerName ,
@@ -83,7 +83,7 @@ export class PlayersService {
       .subscribe(res => console.log('Done'));
   }
   deletePlayer(id){
-    const uri = '/players/delete/' + id;
+    const uri = 'https://gbc-fullstack-backend.herokuapp.com/players/delete/' + id;
 
     return this
         .http
